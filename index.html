@@ -336,6 +336,7 @@ function render() {
     const done = wins.has(name);
     const tile = document.createElement("div");
     tile.className = "tile" + (done ? " done" : "");
+    console.log("{id}.png");
     tile.innerHTML =
       `<img loading="lazy" src="/img/{id}.png" alt="${name}"
          onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'?',style:'display:flex;align-items:center;justify-content:center;height:100%;font-size:1.5rem;color:#c8aa6e'}))">
