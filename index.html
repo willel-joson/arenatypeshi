@@ -314,14 +314,7 @@ ROLES.forEach(role => {
 });
 
 function visibleChamps() {
-  return CHAMPS.filter(([, name, tags]) => {
-    if (query && !name.toLowerCase().includes(query)) return false;
-    if (activeRoles.size && !tags.some(t => activeRoles.has(t))) return false;
-    const done = wins.has(name);
-    if (viewMode === "done" && !done) return false;
-    if (viewMode === "remaining" && done) return false;
-    return true;
-  });
+  return CHAMPS;
 }
 
 function render() {
