@@ -337,7 +337,7 @@ function render() {
     const tile = document.createElement("div");
     tile.className = "tile" + (done ? " done" : "");
     tile.innerHTML =
-      `<img loading="lazy" src="ICONBASE{ICON_BASE}ICONB​ASE{id}.png" alt="${name}"
+      `<img loading="lazy" src="/img/{id}.png" alt="${name}"
          onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'?',style:'display:flex;align-items:center;justify-content:center;height:100%;font-size:1.5rem;color:#c8aa6e'}))">
        <div class="name">${name}</div><div class="check">✓</div>`;
     tile.onclick = () => toggle(name);
